@@ -1,0 +1,94 @@
+/* Estilos básicos para resetear */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: gray;
+}
+
+/* Estilos del navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+}
+
+/* Estilos del botón sándwich */
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  left: .75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* Estilos de los enlaces */
+.navbar-links ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+.navbar-links li {
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 1px solid white;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Ocultar enlaces en dispositivos móviles */
+.navbar-links {
+  display: none;
+  width: 100%;
+}
+
+/* Estilo de los enlaces cuando están activos */
+.navbar-links.active {
+  display: block;
+}
+
+/* Estilos para dispositivos más grandes */
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+  }
+
+  .toggle-button {
+    display: none;
+  }
+
+  .navbar-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-links ul {
+    display: flex;
+  }
+
+  .navbar-links li {
+    border-bottom: none;
+  }
+}

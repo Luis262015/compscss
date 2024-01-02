@@ -1,0 +1,28 @@
+.pulser{
+  width: 30px;
+  height: 30px;
+  background: #09f;
+  border-radius: 50%;
+  position: relative;
+  transition-duration: 2s;
+  transition-property: background, scale;
+  /* transition-timing-function: linear; */
+  /* transition-timing-function: ease-in; */
+  /* transition-timing-function: ease-out; */
+  transition-timing-function: ease-in-out;
+  /* transition-timing-function: steps(50); */
+  /* transition-delay: 1s; */
+  transition: background 300ms linear, scale 500ms ease-in-out;
+}
+
+.pulser:hover{
+  scale:2;
+  background: purple;
+  box-shadow: 0 0 10px purple;
+}
+
+body{
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}

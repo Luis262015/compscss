@@ -1,0 +1,135 @@
+body{
+  background: #ddd;
+}
+
+.parent{
+  display: block;
+}
+
+.item {
+  border: 1px solid;
+  opacity: .9;
+  width: 100px;
+  height: 100px;
+  background: #09f;
+  display: inline;
+}
+
+.item:first-child{
+  background: yellow;
+}
+
+.item:last-child{
+  background: red;
+}
+
+/* FLEX */
+
+.parent2{
+  display: flex; /* Contenedor flexible */
+  flex-direction: row;
+  border: 4px solid #000;
+  width: 250px;
+  box-sizing: border-box;
+  height: 400px;
+  /* justify-content: center; */
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  justify-content: space-evenly;
+}
+
+.item2 {
+  border: 1px solid;
+  box-sizing: border-box;
+  opacity: .9;
+  width: 50px;
+  height: 50px;  
+}
+
+.item2:first-child{
+  background: yellow;
+}
+.item2:nth-child(2){
+  background: blue;
+}
+
+.item2:last-child{
+  background: red;
+}
+
+/* GRID */
+
+.container{
+  background: lightcoral;
+  border: 3px solid black;
+  border-radius: 10px;
+  display: grid;
+  /* grid-template-columns: auto 50px 100px; */
+  /* grid-template-columns: 1fr 2fr; */
+  /* grid-template-rows: 100px 50px 30px 100px 40px; */
+  /* grid-template-rows: 100px; */
+  /* grid-auto-rows: 50px; */
+  /* grid-auto-flow: row; */
+
+  /* grid-template-columns: 100px repeat(5, 1fr); */
+  /* grid-template-columns: repeat(3, 1fr 2fr); */
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: minmax(100px, 2fr) repeat(3, 2fr);
+}
+
+.container div{
+  background: lightblue;
+  border: 2px solid #09f;
+  border-radius: 6px;
+}
+
+/* EJEMPLO GRID 1 inicio */
+
+div{
+  display: grid;
+  /* grid-template-columns: 1fr; */
+  grid-template-columns: repeat(
+    auto-fill,
+    /* auto-fit, */
+    minmax(200px, 1fr)
+  );
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* @media (width > 300px) {
+  div{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (width > 600px){
+  div{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+} */
+
+/* EJEMPLO GRID 1 fin */
+
+.container2 {
+  background: lightcoral;
+  border: 3px solid black;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) 1fr 1fr;
+  grid-auto-rows: 50px;
+  gap: 4px;
+}
+
+.container2 div {
+  background: lightblue;
+  border: 2px solid #09f;
+  border-radius: 6px;
+}
