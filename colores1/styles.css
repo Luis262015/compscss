@@ -1,0 +1,41 @@
+/* styles.css */
+
+/* Color Dominante - 60% */
+body {
+  background-color: #f0f0f0; /* Color neutro para el fondo */
+}
+
+/* Color Secundario - 30% */
+.header,
+.footer {
+  background-color: #3498db; /* Azul para la cabecera y pie de página */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Color de Acento - 10% */
+.sidebar {
+  background-color: #e74c3c; /* Rojo para la barra lateral */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Ajustes de estilo para el contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main {
+  width: 60%;
+  padding: 20px;
+  text-align: center;
+}
+
+.sidebar {
+  width: 20%;
+  margin: 20px 0;
+}
