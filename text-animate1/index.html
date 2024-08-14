@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .headline-text {
+        line-height: 1;
+        font-size: 250px;
+        font-weight: 700;
+        color: var(--ygency-headline-color);
+        text-transform: uppercase;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        white-space: nowrap;
+      }
+
+      .headline-text > span {
+        padding-left: 100%;
+        -webkit-animation: marquee 15s linear infinite;
+        animation: marquee 15s linear infinite;
+      }
+
+      .headline-text > span span {
+        opacity: 0.2;
+        color: transparent;
+        -webkit-text-stroke: 1px;
+        /* -webkit-text-stroke-color: white; */
+        -webkit-text-stroke-color: black;
+      }
+
+      /* Headline */
+      @-webkit-keyframes marquee {
+        100% {
+          -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+        }
+      }
+      @keyframes marquee {
+        100% {
+          -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+        }
+      }
+
+      @-webkit-keyframes marquee_right {
+        from {
+          -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+        }
+        to {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      @keyframes marquee_right {
+        from {
+          -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+        }
+        to {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      @-webkit-keyframes marquee_left {
+        from {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+        to {
+          -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+        }
+      }
+
+      @keyframes marquee_left {
+        from {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+        to {
+          -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+        }
+      }
+
+      /**/
+      .hero-content h1 {
+        line-height: 1;
+        /* font-size: 180px; */
+        font-size: 150px;
+        font-weight: 700;
+        position: relative;
+        margin-bottom: -85px;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="headline-area pt-90 rpt-85 rel z-1">
+      <div class="container-fluid">
+        <div class="headline-text marquee">
+          <span>Software <span> Web </span> SEO <span> Marketing </span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-8">
+      <div class="hero-content wow fadeInLeft delay-0-2s" style="visibility: visible">
+        <h1>Web <span>Design</span> <i>Agency</i></h1>
+      </div>
+    </div>
+  </body>
+</html>
