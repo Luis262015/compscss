@@ -10,7 +10,7 @@ import { onMounted } from "vue";
 
 onMounted(() => {
   // Debug
-  const gui = new dat.GUI();
+  // const gui = new dat.GUI();
 
   // Canvas
   const canvas = document.querySelector("canvas.webgl");
@@ -23,7 +23,8 @@ onMounted(() => {
 
   // Particulas
   const particlesGeometry = new THREE.BufferGeometry();
-  const particlesCnt = 5000;
+  // const particlesCnt = 5000;
+  const particlesCnt = 2000;
   const posArray = new Float32Array(particlesCnt * 3);
 
   for (let i = 0; i < particlesCnt * 3; i++) {
@@ -124,11 +125,15 @@ onMounted(() => {
     mouseY = event.clientY;
     // console.log(particlesMesh.rotation.x);
     // console.log(particlesMesh.rotation.y);
+    console.log("Elapsedtime: " + clock.getElapsedTime());
   }
 
-  const clock = new THREE.Clock();
+  let clock = new THREE.Clock();
   const tick = () => {
     const elapsedTime = clock.getElapsedTime();
+    if (elapsedTime > 60) {
+      clock = new THREE.Clock();
+    }
     sphere.rotation.y = 0.5 * elapsedTime;
     // particlesMesh.rotation.y = -0.1 * elapsedTime;
     // particlesMesh.rotation.y = -0.1 * elapsedTime;
@@ -136,8 +141,10 @@ onMounted(() => {
     if (inCanvas) {
       // particlesMesh.rotation.x = -mouseY * (elapsedTime * 0.00008);
       // particlesMesh.rotation.y = mouseX * (elapsedTime * 0.00008);
-      particlesMesh.rotation.x = -mouseY * 0.00008;
-      particlesMesh.rotation.y = mouseX * 0.00008;
+      particlesMesh.rotation.x = -mouseY * (elapsedTime * 0.00008);
+      particlesMesh.rotation.y = mouseX * (elapsedTime * 0.00008);
+      // particlesMesh.rotation.x = -mouseY * 0.00008;
+      // particlesMesh.rotation.y = mouseX * 0.00008;
     } else {
       particlesMesh.rotation.y = -0.1 * elapsedTime;
     }
