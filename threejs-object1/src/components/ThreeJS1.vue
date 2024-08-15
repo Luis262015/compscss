@@ -101,14 +101,46 @@ onMounted(() => {
   });
   renderer.setSize(sizes.width, sizes.height);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  renderer.setClearColor(new THREE.Color("#21282a"), 1);
+  // renderer.setClearColor(new THREE.Color("#21282a"), 1);
+  renderer.setClearColor(new THREE.Color("#34202f"), 1);
 
   document.addEventListener("mousemove", animateParticles);
+
+  document.addEventListener("mouseenter", () => {
+    console.log("mouse up");
+    inCanvas = true;
+  });
+  document.addEventListener("mouseleave", () => {
+    console.log("mouse down");
+    inCanvas = false;
+  });
+
+  let mouseX = 0;
+  let mouseY = 0;
+  let inCanvas = false;
+
+  function animateParticles(event) {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+    // console.log(particlesMesh.rotation.x);
+    // console.log(particlesMesh.rotation.y);
+  }
 
   const clock = new THREE.Clock();
   const tick = () => {
     const elapsedTime = clock.getElapsedTime();
     sphere.rotation.y = 0.5 * elapsedTime;
+    // particlesMesh.rotation.y = -0.1 * elapsedTime;
+    // particlesMesh.rotation.y = -0.1 * elapsedTime;
+    // if (mouseX > 0) {
+    if (inCanvas) {
+      // particlesMesh.rotation.x = -mouseY * (elapsedTime * 0.00008);
+      // particlesMesh.rotation.y = mouseX * (elapsedTime * 0.00008);
+      particlesMesh.rotation.x = -mouseY * 0.00008;
+      particlesMesh.rotation.y = mouseX * 0.00008;
+    } else {
+      particlesMesh.rotation.y = -0.1 * elapsedTime;
+    }
 
     renderer.render(scene, camera);
 

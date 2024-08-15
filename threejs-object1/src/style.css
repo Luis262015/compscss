@@ -1,3 +1,7 @@
+:root {
+  /* --bg-color: #21282a; */
+  --bg-color: #34202f;
+}
 * {
   margin: 0;
   padding: 0;
