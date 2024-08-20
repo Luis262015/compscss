@@ -1,0 +1,57 @@
+/* styles.css */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.background-container {
+  background-image: url("fondo.jpg"); /* Reemplaza con la ruta de tu imagen */
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.typewriter-container {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+h1 {
+  color: white;
+  font-size: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white;
+  width: 0;
+}
+
+.typewriter-container.typing h1 {
+  animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Animación de escribir */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Parpadeo del cursor */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
