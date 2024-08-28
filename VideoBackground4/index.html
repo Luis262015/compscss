@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header con Video de Fondo</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+      }
+
+      .header {
+        position: relative;
+        height: 500px;
+        overflow: hidden;
+      }
+
+      .header video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 1;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+      }
+
+      .nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+      }
+
+      .nav a {
+        color: white;
+        text-decoration: none;
+        padding: 15px 20px;
+        transition: background 0.3s;
+      }
+
+      .nav a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .logo {
+        height: 40px; /* Ajusta el tamaño del logo */
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <video autoplay muted loop>
+        <source src="../assets/video/Video.webm" type="video/webm" />
+        Tu navegador no soporta el video.
+      </video>
+      <nav class="nav">
+        <img src="tu-logo.png" alt="Logo" class="logo" />
+        <!-- Logo -->
+        <div>
+          <a href="#inicio">Inicio</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>
