@@ -1,0 +1,76 @@
+/*
+
+4. Ventajas de Flexbox
+Distribución eficiente del espacio: Flexbox facilita la distribución uniforme del espacio entre elementos.
+Alineación sencilla: Las propiedades de Flexbox permiten una alineación precisa tanto horizontal como vertical.
+Diseño adaptable: Los elementos flexibles se adaptan al tamaño de su contenedor sin requerir cálculos manuales de tamaños o márgenes.
+
+5. Limitaciones de Flexbox
+Diseños unidimensionales: Flexbox está diseñado principalmente para trabajar en una sola dimensión (horizontal o vertical), lo que lo hace menos eficiente para layouts en dos dimensiones (para los cuales CSS Grid es más adecuado).
+
+Con Flexbox puedes lograr layouts modernos y responsive de forma fácil y eficiente.
+
+*/
+
+.container {
+  border: 1px solid aqua;
+  display: flex;
+  flex-direction: row; /* row, row-reverse, column, column-reverse */
+  justify-content: center; /* flex-start, flex-end, center, space-between, space-around, space-evenly */
+  align-items: stretch; /* stretch, flex-start, flex-end, center, baseline */
+  flex-wrap: wrap; /* nowrap, wrap, wrap-reverse */
+  align-content: stretch; /* stretch, flex-start, flex-end, center, space-between, space-around */
+}
+
+.item {
+  padding: 5px;
+  border: 1px solid black;
+  flex-grow: 1; /* El elemento crecerá para llenar el espacio disponible */
+  flex-shrink: 1; /* El elemento puede encogerse si es necesario */
+  flex-basis: 300px; /* Establece el ancho inicial del elemento */
+  align-self: center;
+  order: 1; /* Cambia el orden de aparición del elemento */
+}
+
+/*
+CSS Grid Layout es un sistema de diseño de dos dimensiones que permite organizar elementos en filas y columnas. 
+A diferencia de Flexbox (que es un sistema unidimensional), 
+Grid es ideal para crear layouts complejos en dos dimensiones, 
+lo que lo hace muy útil para construir páginas web y estructuras de componentes.
+*/
+
+.container2 {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px; /* Tres columnas: la primera y la última de 200px, la del medio flexible */
+  grid-template-rows: 100px 100px; /* Dos filas de 100px */
+  gap: 10px; /* Espacio entre las columnas y filas */
+  /* column-gap: 20px; */
+  /* row-gap: 15px; */
+  justify-items: start; /* start, end, center, stretch */
+  align-items: start; /* start, end, center, stretch */
+  grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas iguales */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(150px, 1fr)
+  ); /* Crea tantas columnas de al menos 150px como sea posible */
+  justify-content: center; /* start, end, center, space-between, space-around, space-evenly */
+  align-content: center; /* start, end, center, space-between, space-around, space-evenly */
+  justify-content: center; /* Alinea todo el grid horizontalmente en el centro */
+  align-content: center; /* Alinea todo el grid verticalmente en el centro */
+}
+
+.item2 {
+  border: 1px solid black;
+  justify-self: center;
+  align-self: center;
+}
+
+.item2 .item2uno {
+  grid-column: 1 / 3; /* Ocupa desde la línea 1 hasta la línea 3, es decir, dos columnas */
+  grid-row: 1 / 2; /* Ocupa solo una fila */
+}
+
+.item2 .item2dos {
+  grid-area: 1 / 2 / 3 / 4; /* Se define como: fila-inicio / columna-inicio / fila-fin / columna-fin */
+}

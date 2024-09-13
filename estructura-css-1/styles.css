@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__portafolio {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.cards {
+  border: 1px solid red;
+  max-width: 1200px;
+  width: 100%;
+  padding: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  border: 1px solid aqua;
+  position: relative;
+  width: 500px;
+  height: 400px;
+  padding: 2px;
+}

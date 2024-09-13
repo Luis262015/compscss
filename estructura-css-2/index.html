@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sección de Cards</title>
+    <style>
+      /* Estilos para la sección */
+      .section {
+        border: 1px solid black;
+        display: flex; /* Utilizamos Flexbox */
+        justify-content: center; /* Centra el contenedor horizontalmente */
+        padding: 20px; /* Espacio alrededor */
+        background-color: #f0f0f0; /* Color de fondo para distinguir la sección */
+      }
+
+      /* Contenedor de cards */
+      .cards-container {
+        border: 1px solid red;
+        display: flex; /* Distribuirá las cards en línea */
+        flex-wrap: wrap; /* Permite que las cards salten a la siguiente línea si no caben */
+        justify-content: space-between; /* Distribuye el espacio entre las cards */
+        justify-content: space-evenly;
+        max-width: 1200px; /* Ancho máximo del contenedor */
+        width: 100%; /* Asegura que el contenedor no sea más ancho que su contenido */
+        margin: 0 auto; /* Centra el contenedor */
+      }
+
+      /* Estilos para las cards */
+      .card {
+        border: 1px solid aqua;
+        background-color: white; /* Fondo blanco */
+        width: 500px; /* Ancho fijo */
+        height: 400px; /* Alto fijo */
+        margin: 10px 0; /* Margen entre las cards */
+        border: 1px solid #ccc; /* Borde ligero */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para efecto 3D */
+        display: flex; /* Para centrar el contenido dentro de la card */
+        align-items: center; /* Centra el contenido verticalmente */
+        justify-content: center; /* Centra el contenido horizontalmente */
+        text-align: center; /* Alinea el texto en el centro */
+        font-family: Arial, sans-serif; /* Fuente básica */
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section">
+      <div class="cards-container">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 3</div>
+      </div>
+    </section>
+  </body>
+</html>
