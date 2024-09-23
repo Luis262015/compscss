@@ -1,0 +1,89 @@
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Botón para abrir el modal */
+.open-modal-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.open-modal-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Estilos del modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slide-down 0.3s ease-out; /* Animación de entrada */
+}
+
+/* Animación de deslizamiento del modal */
+@keyframes slide-down {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Botón de cierre del modal */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+/* Para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 90%;
+  }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel Administrativo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Contenedor principal -->
+    <div class="admin-panel">
+      <!-- Barra lateral (Sidebar) -->
+      <aside class="sidebar" id="sidebar">
+        <button class="close-sidebar" id="close-sidebar">&times;</button>
+        <!-- Botón para cerrar el sidebar -->
+        <div class="sidebar__logo">Mi Panel</div>
+        <nav class="sidebar__nav">
+          <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Usuarios</a></li>
+            <li><a href="#">Configuración</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Contenido Principal -->
+      <div class="main-content">
+        <!-- Encabezado -->
+        <header class="header">
+          <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+          <!-- Botón de hamburguesa -->
+          <div class="header__title">Panel Administrativo</div>
+          <div class="header__profile">
+            <span>Bienvenido, Admin</span>
+          </div>
+        </header>
+
+        <!-- Tarjetas de resumen -->
+        <section class="cards">
+          <div class="card">
+            <h3>Usuarios</h3>
+            <p>150</p>
+          </div>
+          <div class="card">
+            <h3>Ventas</h3>
+            <p>$5000</p>
+          </div>
+          <div class="card">
+            <h3>Pedidos</h3>
+            <p>75</p>
+          </div>
+        </section>
+
+        <!-- Tabla de datos -->
+        <section class="data-table">
+          <h3>Últimos usuarios registrados</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Rol</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Juan Pérez</td>
+                <td>juan@example.com</td>
+                <td>Administrador</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>María López</td>
+                <td>maria@example.com</td>
+                <td>Editor</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <!-- Enlace al archivo JavaScript -->
+  </body>
+</html>
