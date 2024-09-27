@@ -1,0 +1,47 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+}
+
+.video-container {
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Estilos del reproductor de video */
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  outline: none;
+}
+
+/* Controles de video (estilo predeterminado del navegador) */
+/* video::-webkit-media-controls {
+  background-color: #3498db; 
+} */
+
+/* Personalización del control de progreso (solo para WebKit) */
+/* video::-webkit-media-controls-timeline {
+  background-color: #2980b9; 
+} */
+
+/* Opcional: animación de hover sobre el video */
+.video-container:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
