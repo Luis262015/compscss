@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a href="#home" class="nav-logo">MiLanding</a>
+        <ul class="nav-links">
+          <li><a href="#features">Características</a></li>
+          <li><a href="#about">Sobre Nosotros</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Bienvenido a <span class="highlight">MiLanding</span></h1>
+        <p class="hero-subtitle">Explora nuestra experiencia en 3D.</p>
+        <a href="#features" class="btn">Descubrir más</a>
+      </div>
+      <div class="hero-3d">
+        <canvas id="three-canvas"></canvas>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <h2>Características</h2>
+      <div class="feature-card">Interactividad</div>
+      <div class="feature-card">Diseño Moderno</div>
+      <div class="feature-card">Fácil de Usar</div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>Sobre Nosotros</h2>
+      <p>Somos una compañía enfocada en brindar soluciones innovadoras para tu negocio.</p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contacto</h2>
+      <form>
+        <input type="text" placeholder="Tu Nombre" required />
+        <input type="email" placeholder="Tu Email" required />
+        <textarea placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2024 MiLanding. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
