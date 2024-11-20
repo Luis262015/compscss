@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objeto 3D con Scroll</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scroll-container">
+      <section class="intro">
+        <h1>Desplázate para animar el objeto 3D</h1>
+      </section>
+
+      <div class="three-container">
+        <canvas id="three-canvas"></canvas>
+      </div>
+
+      <section class="content">
+        <h2>Continúa desplazándote</h2>
+        <p>El objeto 3D reacciona dinámicamente al scroll.</p>
+      </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
