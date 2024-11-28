@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f0f0;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  /* max-width: 800px; */
+  /* height: 400px; */
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 300%; /* Ajusta según el número de slides */
+}
+
+.slide {
+  min-width: 100%; /* Cada slide ocupa el 100% del contenedor */
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra el slide */
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Permite hacer clic en los botones sobre el SVG */
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  .slider {
+    height: 200px; /* Ajustar la altura en dispositivos pequeños */
+  }
+
+  .mask {
+    height: 200px; /* Ajustar la máscara en dispositivos pequeños */
+  }
+}

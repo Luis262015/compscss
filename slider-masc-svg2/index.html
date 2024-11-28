@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider con Máscara SVG</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="slider">
+      <!-- SVG Mask -->
+      <svg class="slider-mask" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <mask id="reveal-mask">
+          <rect x="0" y="0" width="100" height="100" fill="white" />
+          <circle id="mask-circle" cx="50" cy="50" r="0" fill="black" />
+        </mask>
+      </svg>
+
+      <!-- Slider Items -->
+      <div class="slider-content" style="">
+        <div class="slider-item">
+          <img src="F1.jpg" alt="" />
+        </div>
+        <div class="slider-item">
+          <img src="F1.jpg" alt="" />
+        </div>
+        <div class="slider-item">
+          <img src="F1.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

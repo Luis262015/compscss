@@ -1,0 +1,40 @@
+/* General Reset */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.slider {
+  position: relative;
+  width: 100vw;
+  /* height: 100vh; */
+  overflow: hidden;
+}
+
+.slider-content {
+  display: flex;
+  height: 100%;
+  width: 300%; /* 3 slides */
+  /* transition: transform 1s ease-in-out; */
+  transition: transform 1.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.slider-item {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider-item img {
+  width: 100%;
+}
+
+.slider-mask {
+  position: absolute;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
