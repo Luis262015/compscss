@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.slider-track {
+  display: flex;
+}
+
+.slide img {
+  width: 100%;
+  /* object-position: center; */
+}

@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #f5f5f5;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.text {
+  flex: 1;
+  padding: 10px;
+  text-align: left;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.icono img {
+  padding: 10px;
+  padding-left: 40px;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.indicators div {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indicators .active {
+  background-color: #fff;
+}
+
+/* Responsivo */
+@media (max-width: 720px) {
+  .icono img {
+    display: none;
+  }
+  .slide {
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .text {
+    order: 1;
+  }
+
+  .image {
+    order: 2;
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider Centrado</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="slider">
+      <!-- Contenedor de imágenes -->
+      <div class="slider-track">
+        <div class="slide">
+          <img src="https://via.placeholder.com/1200x800/FF5733/FFFFFF" alt="Slide 1" />
+        </div>
+        <div class="slide">
+          <img src="https://via.placeholder.com/1200x800/2980B9/FFFFFF" alt="Slide 2" />
+        </div>
+        <div class="slide">
+          <img src="https://via.placeholder.com/1200x800/27AE60/FFFFFF" alt="Slide 3" />
+        </div>
+      </div>
+
+      <!-- Botones de navegación -->
+      <button class="btn prev">&laquo;</button>
+      <button class="btn next">&raquo;</button>
+
+      <!-- Indicadores -->
+      <div class="indicators">
+        <span data-index="0" class="active"></span>
+        <span data-index="1"></span>
+        <span data-index="2"></span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

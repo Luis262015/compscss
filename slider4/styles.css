@@ -1,0 +1,92 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  overflow: hidden;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  height: 500px; /* Altura fija del slider */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Slider track */
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Slide */
+.slide {
+  flex: 0 0 100%;
+  height: 100%; /* Ajusta la altura del contenedor */
+}
+
+.slide img {
+  width: 100%; /* La imagen ocupa todo el ancho */
+  height: 100%; /* Ajusta la altura al contenedor */
+  object-fit: cover; /* Recorta la imagen para llenar el contenedor */
+  object-position: center; /* Centra la imagen en el contenedor */
+}
+
+/* Botones */
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.btn.prev {
+  left: 10px;
+}
+
+.btn.next {
+  right: 10px;
+}
+
+/* Indicadores */
+.indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.indicators span {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicators .active {
+  background-color: #007bff;
+}
