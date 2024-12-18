@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú Hamburguesa con Submenú</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <!-- Logo con imagen -->
+        <div class="logo">
+          <a href="#">
+            <img src="https://via.placeholder.com/100x50" alt="Logo" />
+          </a>
+        </div>
+
+        <!-- Botón Hamburguesa -->
+        <button class="hamburger" aria-label="Abrir menú">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+
+        <!-- Navegación -->
+        <nav class="nav-links">
+          <a href="#">Inicio</a>
+          <a href="#">Servicios</a>
+          <div class="submenu-container">
+            <a href="#" class="has-submenu">Acerca ▼</a>
+            <!-- Submenú -->
+            <div class="submenu">
+              <a href="#">Equipo</a>
+              <a href="#">Historia</a>
+              <a href="#">Misión</a>
+            </div>
+          </div>
+          <a href="#">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <script src="script.js"></script>
+  </body>
+</html>

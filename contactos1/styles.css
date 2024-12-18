@@ -1,0 +1,100 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Sección principal */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
+  width: 100%;
+  max-width: 1200px; /* Ancho máximo de 1200px */
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+/* Contenedor del formulario */
+.form-container {
+  flex: 1;
+  padding: 30px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Contenedor del mapa */
+.map-container {
+  flex: 1;
+  min-height: 400px;
+  position: relative;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+  }
+
+  .form-container,
+  .map-container {
+    flex: none;
+    width: 100%; /* Cada parte ocupa todo el ancho */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+}

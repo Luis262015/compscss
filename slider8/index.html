@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider con Texto e Imagen</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slide">
+        <div class="text-part">
+          <h2>Título 1</h2>
+          <p>Este es el párrafo del primer slide. Aquí puedes añadir más información.</p>
+        </div>
+        <div class="image-part">
+          <img src="imagen1.jpg" alt="Imagen 1" />
+        </div>
+      </div>
+      <div class="slide">
+        <div class="text-part">
+          <h2>Título 2</h2>
+          <p>Este es el párrafo del segundo slide. Aquí puedes añadir más información.</p>
+        </div>
+        <div class="image-part">
+          <img src="imagen2.jpg" alt="Imagen 2" />
+        </div>
+      </div>
+      <div class="slide">
+        <div class="text-part">
+          <h2>Título 3</h2>
+          <p>Este es el párrafo del tercer slide. Aquí puedes añadir más información.</p>
+        </div>
+        <div class="image-part">
+          <img src="imagen3.jpg" alt="Imagen 3" />
+        </div>
+      </div>
+      <div class="slide">
+        <div class="text-part">
+          <h2>Título 4</h2>
+          <p>Este es el párrafo del cuarto slide. Aquí puedes añadir más información.</p>
+        </div>
+        <div class="image-part">
+          <img src="imagen4.jpg" alt="Imagen 4" />
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".slider").slick({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        });
+      });
+    </script>
+  </body>
+</html>
