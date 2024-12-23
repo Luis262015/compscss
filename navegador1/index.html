@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desplazamiento con Ajuste</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        z-index: 1000;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      section {
+        padding: 100px 20px;
+        height: 800px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      #section1 {
+        background-color: #f4f4f4;
+      }
+      #section2 {
+        background-color: #ddd;
+      }
+      #section3 {
+        background-color: #bbb;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#section1" class="scroll-link">Ir a Sección 1</a>
+        <a href="#section2" class="scroll-link">Ir a Sección 2</a>
+        <a href="#section3" class="scroll-link">Ir a Sección 3</a>
+      </nav>
+    </header>
+
+    <section id="section1">
+      <h2>Sección 1</h2>
+      <p>Contenido de la sección 1.</p>
+    </section>
+    <section id="section2">
+      <h2>Sección 2</h2>
+      <p>Contenido de la sección 2.</p>
+    </section>
+    <section id="section3">
+      <h2>Sección 3</h2>
+      <p>Contenido de la sección 3.</p>
+    </section>
+
+    <script>
+      // Ajustar el desplazamiento al hacer clic en los enlaces
+      document.querySelectorAll(".scroll-link").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault(); // Evita el comportamiento predeterminado
+          const targetId = this.getAttribute("href").substring(1); // Obtén el ID del destino
+          const targetElement = document.getElementById(targetId);
+
+          // Calcula la posición ajustada
+          const offset = 80; // Ajuste en píxeles
+          const targetPosition = targetElement.offsetTop - offset;
+
+          // Desplazamiento suave
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
