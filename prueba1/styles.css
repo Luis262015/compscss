@@ -1,0 +1,16 @@
+.hero {
+  background-image: url("../imgs/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  display: flex; /* Utiliza Flexbox para centrar el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+  color: white; /* Color del texto */
+  text-align: center; /* Alineación del texto en el centro */
+}
+
+.hero-content {
+  max-width: 800px; /* Ancho máximo del contenido */
+  padding: 20px; /* Espaciado interno */
+}
