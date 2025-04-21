@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Imagen Sticky Completa</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+      }
+      .sticky-image-container {
+        width: 300px;
+        flex-shrink: 0;
+        margin-right: 20px;
+      }
+      .sticky-image {
+        position: sticky;
+        top: 20px;
+        width: 300px;
+        height: 400px;
+        object-fit: cover;
+      }
+      .main-content {
+        flex-grow: 1;
+      }
+      .slider-section {
+        height: 500px;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .content-container {
+        display: flex;
+        padding: 20px;
+      }
+      .additional-section {
+        padding: 40px 20px;
+        background-color: #f9f9f9;
+        margin-bottom: 20px;
+      }
+      .additional-section:nth-child(even) {
+        background-color: #f1f1f1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-content">
+        <div class="slider-section">
+          <h2>Slider Principal</h2>
+          <!-- Aquí iría tu slider -->
+        </div>
+
+        <div class="content-container">
+          <div class="sticky-image-container">
+            <img src="/api/placeholder/300/400" alt="Imagen Sticky" class="sticky-image" />
+          </div>
+          <div>
+            <h2>Contenido después del Slider</h2>
+            <p>Aquí puedes añadir texto o contenido adicional. La imagen permanecerá visible durante el scroll.</p>
+          </div>
+        </div>
+
+        <div class="additional-section">
+          <h2>Sección Adicional 1</h2>
+          <p>Este es un ejemplo de una sección adicional de contenido.</p>
+        </div>
+
+        <div class="additional-section">
+          <h2>Sección Adicional 2</h2>
+          <p>La imagen sticky será visible en todas estas secciones.</p>
+        </div>
+
+        <div class="additional-section">
+          <h2>Sección Adicional 3</h2>
+          <p>Puedes seguir añadiendo más secciones según sea necesario.</p>
+        </div>
+
+        <div class="additional-section">
+          <h2>Sección Adicional 4</h2>
+          <p>La imagen permanecerá en su lugar durante el scroll de estas secciones.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
